@@ -515,7 +515,7 @@ def get_movies_from_radarr_api(url, apikey_radarr, radarr_id=None):
                                 apikey_radarr
 
     try:
-        r = requests.get(url_radarr_api_movies, timeout=60, verify=False, headers=headers)
+        r = requests.get(url_radarr_api_movies, timeout=300, verify=False, headers=headers)
         if r.status_code == 404:
             return
         r.raise_for_status()
